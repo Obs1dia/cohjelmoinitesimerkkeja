@@ -1,0 +1,50 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace summaka1
+{
+    class Program
+    {
+        static int LukujenSumma(int [] luvut)
+        {
+            int summa = 0;
+            for (int i = 0; i<5; i++)
+            {
+                summa += luvut[i];
+            }
+            return summa;
+        } 
+        static int LukujenKA(int [] luvut)
+        {
+            int ka = 0;
+            int summa = LukujenSumma(luvut);
+            ka = summa / luvut.Length;
+            return ka;
+        }
+
+        static void Main(string[] args)
+        {
+
+            int[] luvut = new int[5];
+            int luku, summa, ka;
+            
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("anna luku {0}", i + 1);
+                luku = int.Parse(Console.ReadLine());
+                luvut[i] = luku;
+
+            }
+            summa = LukujenSumma(luvut);
+            ka = LukujenKA(luvut);
+            Console.WriteLine("Summa on {0} ja keskiarvo on {1}", summa, ka);
+            Console.ReadLine();
+
+        }
+
+    }
+}

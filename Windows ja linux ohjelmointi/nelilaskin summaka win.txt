@@ -1,0 +1,67 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace summaka1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // nelilaskin
+            /*int luku1, luku2, tulos;
+            char lasku;
+            tulos = 0;
+
+            Console.WriteLine("Anna luku 1; ");
+            luku1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Anna luku 2; ");
+            luku2 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Anna laskutoimitus");
+            lasku = char.Parse(Console.ReadLine());
+
+            switch (lasku)
+            {
+                case '+':
+                    tulos = luku1 + luku2;
+                    break;
+                case '-':
+                    tulos = luku1 - luku2;
+                    break;
+                case '*':
+                    tulos = luku1 * luku2;
+                    break;
+                case '/':
+                    tulos = luku1 / luku2;
+                    break;
+                default:
+                    Console.WriteLine("virheellinen laskutoimitus");
+                    break;
+            }
+            Console.WriteLine("Laskun tulos on: {0} ", tulos);
+            Console.ReadLine();*/
+
+            // summa ja keskiarvo
+
+            int[] luvut = new int[5];
+            int luku, summa, ka;
+            summa = 0;
+            ka = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("anna luku {0}", i+1);
+                luku = int.Parse(Console.ReadLine());
+                summa = summa + luku;
+
+            }
+            ka = summa / luvut.Length;
+            Console.WriteLine("Summa on {0} ja keskiarvo on {1}", summa, ka);
+            Console.ReadLine();
+        }
+    }
+}

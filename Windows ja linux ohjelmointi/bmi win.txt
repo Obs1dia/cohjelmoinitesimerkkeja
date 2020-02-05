@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace summaka1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double pituus, paino, bmi;
+            Console.WriteLine("Anna pituus: ");
+            pituus = double.Parse(Console.ReadLine());
+            pituus = pituus / 100;
+            Console.WriteLine("anna paino: ");
+            paino = double.Parse(Console.ReadLine());
+            bmi = paino / (pituus * pituus);
+            Console.WriteLine("Painoindeksisi on: {0}", Math.Round(bmi, 2));
+            Console.ReadLine();
+        }
+    }
+}

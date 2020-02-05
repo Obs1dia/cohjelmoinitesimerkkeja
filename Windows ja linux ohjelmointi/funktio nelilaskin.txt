@@ -1,0 +1,78 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace summaka1
+{
+    class Program
+    {
+        static int AnnaLuku ()
+        {
+            int luku = 0;
+            Console.WriteLine("anna luku:");
+            luku = int.Parse(Console.ReadLine());
+
+            return luku;
+        }
+
+        static int LaskeSumma(int luku1, int luku2)
+        {
+            int tulos = 0;
+            tulos = luku1 + luku2;
+            return tulos;
+        }
+        static int LaskeErotus(int luku1, int luku2)
+        {
+            int tulos = 0;
+            tulos = luku1 - luku2;
+            return tulos;
+        }
+        static int LaskeTulo(int luku1, int luku2)
+        {
+            int tulos = 0;
+            tulos = luku1 * luku2;
+            return tulos;
+        }
+        static double LaskeJako(int luku1, int luku2)
+        {
+            double tulos = 0;
+            tulos = luku1 / luku2;
+
+            return tulos;
+        }
+
+        static void Main(string[] args)
+        {
+            int luku1, luku2;
+            luku1 = AnnaLuku();
+            luku2 = AnnaLuku();
+            Console.WriteLine("anna laskutoimitusmerkki");
+            char lasku = char.Parse(Console.ReadLine());
+            switch (lasku)
+            {
+                case '+':
+                    Console.WriteLine(LaskeSumma(luku1, luku2));
+                    break;
+                case '-':
+                    Console.WriteLine(LaskeErotus(luku1, luku2));
+                    break;
+                case '*':
+                    Console.WriteLine(LaskeTulo(luku1, luku2));
+                    break;
+                case '/':
+                    Console.WriteLine(LaskeJako(luku1, luku2));
+                    break;
+                default:
+                    Console.WriteLine("virheellinen laskutoimitus");
+                    break;
+            }
+
+            Console.ReadLine();
+
+        }
+
+    }
+}
